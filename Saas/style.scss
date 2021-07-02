@@ -1,7 +1,10 @@
-@import "variables";
-@import "functions";
-@import "mixins";
-@import "header";
-@import "sections";
-@import "main";
-@import "footer";
+@import "./utils/variables";
+@import "./Base/fonts";
+@import "./Base/elements";
+@import "./utils/mixins";
+@import "./composants/buttons";
+@import "./Layout/header";
+@import "./Pages/homeMain";
+@import "./Pages/homesections";
+@import "./Pages/restaurants";
+@import "./Layout/footer";
