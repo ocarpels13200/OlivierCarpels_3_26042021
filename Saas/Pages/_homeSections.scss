@@ -2,18 +2,31 @@
     width: 100%;
     background-color: #EAEAEA;
     height: 70px;
-    display: flex;
-    justify-content: center;
+    &__container{
+        width: max-content;
+        margin: auto;
+        display: flex;
+        height: 100%
+    }
     &__logo{
         display: flex;
+        width: 20%;
         align-items: center;
-        margin-right: 25px;
+        justify-content: right;
     }
     &__town{
-        width: 50%;
+        width: 80%;
         @include font2;
         font-size: $paragraphfontsize;
+        text-align: center;
         background-color: transparent;
         border: transparent;
+    }
+}
+.presentation{
+    &__title{
+        text-align: center;
+        font-weight: bolder;
+        margin: 50px 0px 25px 0px;
     }
 }
