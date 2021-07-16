@@ -4,3 +4,15 @@
 @mixin font2 {
     font-family: 'Roboto', sans-serif;
 }
+@mixin homeRestaurantContainer {
+    height: 130px;
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+@mixin homeRestaurantPicture{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

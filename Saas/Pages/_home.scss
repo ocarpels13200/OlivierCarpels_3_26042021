@@ -27,7 +27,6 @@
 .presentation{
     &__title{
         text-align: center;
-        font-weight: bolder;
         margin: 50px 0px 25px 0px;
     }
     &__subtitle{
@@ -84,5 +83,34 @@
     &--select{
         background-color: rgba($secondaryColor, 0.15);
         border-radius: 50px;
+    }
+}
+.restaurant{
+    border: transparent;
+    background-color: #fff;
+    margin: 0px 25px;
+    border-radius: 25px;
+    position: relative;
+    &__picture{
+        @include homeRestaurantContainer;
+        & > img{
+            @include homeRestaurantPicture;
+        }
+    }
+    &__new{
+        color: $fourthColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bolder;
+        border: transparent;
+        height: min-content;
+        background-color: $tertiaryColor;
+        border-radius: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 80px;
+        height: 30px;
     }
 }
