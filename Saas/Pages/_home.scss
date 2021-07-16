@@ -81,4 +81,8 @@
         text-align: left;
         font-weight: bold;
     }
+    &--select{
+        background-color: rgba($secondaryColor, 0.15);
+        border-radius: 50px;
+    }
 }
