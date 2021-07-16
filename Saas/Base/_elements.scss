@@ -5,3 +5,7 @@ h1, h2{
     @include font2;
     font-size: $titlefontsize;
 }
+p{
+    @include font2;
+    font-size: $paragraphfontsize;
+}
