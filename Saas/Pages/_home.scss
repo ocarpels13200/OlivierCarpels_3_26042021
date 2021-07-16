@@ -85,10 +85,14 @@
         border-radius: 50px;
     }
 }
+.maintitle{
+    margin-left: 25px;
+    padding-top: 55px;
+}
 .restaurant{
     border: transparent;
     background-color: #fff;
-    margin: 0px 25px;
+    margin: 15px 25px;
     border-radius: 25px;
     position: relative;
     &__picture{
@@ -112,5 +116,39 @@
         right: 10px;
         width: 80px;
         height: 30px;
+    }
+    &__ID{
+        display: flex;
+    }
+    &__description{
+        margin: 15px 0px 15px 15px;
+    }
+    &__name{
+        margin: 0px;
+        padding: 0px 0px 10px 0px;
+    }
+    &__town{
+        margin: 0px;
+        padding: 0px 0px 15px 0px;
+    }
+    &__heart{
+        position: absolute;
+        right: 30px;
+        top: 150px;
+        opacity: 0.5;
+        &--select{
+            color: $primaryColor;
+            opacity: 1;
+        }
+    }
+    &__hand{
+        display: none;
+        &--select{
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: -12px;
+            color: #000;
+        }
     }
 }
