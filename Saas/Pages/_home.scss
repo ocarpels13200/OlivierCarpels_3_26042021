@@ -95,6 +95,10 @@
     margin: 15px 25px;
     border-radius: 25px;
     position: relative;
+    & > a{
+        text-decoration: none;
+        color: #000
+    }
     &__picture{
         @include homeRestaurantContainer;
         & > img{
