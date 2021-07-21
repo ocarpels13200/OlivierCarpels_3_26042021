@@ -1,9 +1,14 @@
 figure {
     margin: 0px;
 }
-h1, h2{
+h1{
     @include font2;
     font-size: $titlefontsize;
+    font-weight: bold
+}
+h2{
+    @include font2;
+    font-size: $titlefontsize*0.8;
     font-weight: bold
 }
 p{

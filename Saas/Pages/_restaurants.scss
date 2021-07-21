@@ -1,0 +1,82 @@
+.restaurantpicture{
+    @include restaurantMenuContainer;
+    & > img{
+        @include restaurantMenuPicture;
+    }
+}
+#mainMenu{
+    background-color: #eaeaea;
+    border: solid 2px #EAEAEA;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+.menu{
+    &__restaurant{
+        display: flex;
+    }
+    &__title{
+        @include font1;
+        font-size: $titlefontsize;
+        font-weight: bold;
+        margin-left: 15px;
+        padding-top: 25px;
+    }
+    &__hearth{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        opacity: 0.6;
+    }
+    &__firstcourse{
+        border: solid #fff 1px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin: 10px 15px;
+    }
+    &__firstcoursetitle{
+        margin-left: 15px;
+    }
+    &__layout{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8px 15px;
+    }
+    &__layout1{
+        & > p:first-child{
+            font-weight: bold;
+        }
+        & > p{
+            margin: 0px;
+        }
+    }
+    &__layout2{
+        align-self: flex-end;
+        & > p{
+            margin: 0px;
+        }
+    }
+    &__maincourse{
+        border: solid #fff 1px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin: 10px 15px;
+    }
+    &__maincoursetitle{
+        margin-left: 15px;
+    }
+    &__dessert{
+        border: solid #fff 1px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin: 10px 15px;
+    }
+    &__desserttitle{
+        margin-left: 15px;
+    }
+}
