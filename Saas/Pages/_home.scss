@@ -1,6 +1,6 @@
 .localize{
     width: 100%;
-    background-color: #EAEAEA;
+    background-color: $grey1;
     height: 70px;
     &__container{
         width: max-content;
@@ -25,9 +25,10 @@
     }
 }
 .presentation{
+    background-color: $grey2;
+    padding: 50px 0px 50px 0px;
     &__title{
         text-align: center;
-        margin: 50px 0px 25px 0px;
     }
     &__subtitle{
         text-align: center;
@@ -39,12 +40,12 @@
     margin-left: 25px;
     margin-right: 25px;
     &__title{
-        margin-top: 80px;
+        margin-top: 50px;
         margin-bottom: 30px;
     }
     &__step{
-        border: solid 1px #EAEAEA;
-        box-shadow: 10px 10px 7px #EAEAEA;
+        border: solid 1px $grey1;
+        box-shadow: 10px 10px 7px $grey1;
         border-radius: 25px;
         position: relative;
         margin-bottom: 30px;
