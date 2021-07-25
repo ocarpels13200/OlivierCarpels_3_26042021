@@ -49,6 +49,7 @@
         text-decoration: none;
     }
     &__step{
+        max-width: 400px;
         border: solid 1px $grey1;
         box-shadow: 10px 10px 7px $grey1;
         border-radius: 25px;
@@ -92,7 +93,6 @@
         font-weight: bold;
     }
 }
-
 .maintitle{
     margin-left: 25px;
     margin-top: 0px;
@@ -104,6 +104,7 @@
     border-radius: 25px;
     position: relative;
     & > a{
+        display: block;
         text-decoration: none;
         color: #000
     }
@@ -161,5 +162,12 @@
         &:hover .restaurant__heart--no{
             display: none;
         }
+    }
+}
+/*Media queries*/
+@media screen and (min-width: 650px){
+    .desktop{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }

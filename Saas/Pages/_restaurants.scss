@@ -24,13 +24,26 @@
         margin-left: 15px;
         padding-top: 25px;
     }
-    &__hearth{
+    &__heart{
         display: flex;
         align-items: center;
         position: absolute;
         top: 40px;
         right: 30px;
-        opacity: 0.6;
+        &--yes{
+            display: none;
+            color: $primaryColor;
+            opacity: 1;
+        }
+        &--no{
+            opacity: 0.6;
+        }
+        &:hover .menu__heart--yes{
+            display: block;
+        }
+        &:hover .menu__heart--no{
+            display: none;
+        }
     }
     &__firstcourse{
         border: solid #fff 1px;
@@ -39,7 +52,15 @@
         margin: 10px 15px;
     }
     &__firstcoursetitle{
+        margin-bottom: 5px;
         margin-left: 15px;
+    }
+    &__line{
+        height: 2px;
+        width: 55px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+        background-color : $tertiaryColor;
     }
     &__layout{
         display: flex;
@@ -68,6 +89,7 @@
         margin: 10px 15px;
     }
     &__maincoursetitle{
+        margin-bottom: 5px;
         margin-left: 15px;
     }
     &__dessert{
@@ -77,6 +99,7 @@
         margin: 10px 15px;
     }
     &__desserttitle{
+        margin-bottom: 5px;
         margin-left: 15px;
     }
 }
