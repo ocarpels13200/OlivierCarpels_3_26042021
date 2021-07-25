@@ -10,9 +10,11 @@
     </head>
     <body>
         <header class="header">
-            <figure class="header__logo">
-                <img src="./publics_html/Images/Logo/ohmyfood@2x.svg" alt="Logo ohmyfood" />
-            </figure>
+            <a href="./index.html" class="header__logo">
+                <figure>
+                    <img src="./publics_html/Images/Logo/ohmyfood@2x.svg" alt="Logo ohmyfood" />
+                </figure>
+            </a>
         </header>
         <!--Localisation des restaurants-->
         <section class="localize">
@@ -24,9 +26,9 @@
         <!--Présentation de l'entreprise-->
         <section class="presentation">
             <h1 class="presentation__title">
-                Réservez le menu qui<br /> vous convient
+                Réservez le menu qui vous convient
             </h1>
-            <p class="presentation__subtitle">Découvrez des restaurants d'exception,<br /> sélectionnés par nos soins.</p>
+            <p class="presentation__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <button type="button" class="presentation__button">
                 Explorer nos restaurants
             </button>
@@ -36,45 +38,51 @@
             <h2 class="functionality__title">
                 Fonctionnement
             </h2>
-            <div class="functionality__step">
-                <div class="step">
-                    <div class="step__number">
-                        <p>1</p>
+            <a href="#main" class="functionality__link">
+                <div class="functionality__step">
+                    <div class="step">
+                        <div class="step__number">
+                            <span>1</span>
+                        </div>
+                        <div class="step__logo step__logo--select">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <p class="step__paragraph">
+                            Choisissez un restaurant
+                        </p>
                     </div>
-                    <div class="step__logo">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <p class="step__paragraph">
-                        Choisissez un restaurant
-                    </p>
                 </div>
-            </div>
-            <div class="functionality__step">
-                <div class="step">
-                    <div class="step__number">
-                        <p>2</p>
+            </a>
+            <a href="#" class="functionality__link">
+                <div class="functionality__step">
+                    <div class="step">
+                        <div class="step__number">
+                            <span>2</span>
+                        </div>
+                        <div class="step__logo step__logo--select">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <p class="step__paragraph">
+                            Composez votre menu
+                        </p>
                     </div>
-                    <div class="step__logo">
-                        <i class="fas fa-list"></i>
-                    </div>
-                    <p class="step__paragraph">
-                        Composez votre menu
-                    </p>
                 </div>
-            </div>
-            <div class="functionality__step">
-                <div class="step step--select">
-                    <div class="step__number">
-                        <p>3</p>
+            </a>
+            <a href="#" class="functionality__link">
+                <div class="functionality__step">
+                    <div class="step">
+                        <div class="step__number">
+                            <span>3</span>
+                        </div>
+                        <div class="step__logo step__logo--select">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <p class="step__paragraph">
+                            Dégustez au restaurant
+                        </p>
                     </div>
-                    <div class="step__logo step__logo--select">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <p class="step__paragraph">
-                        Dégustez au restaurant
-                    </p>
                 </div>
-            </div>
+            </a>
         </section>
         <!--Selection de restaurants-->
         <main id="main">
@@ -100,10 +108,8 @@
                             </p>
                         </div>
                         <div class="restaurant__heart">
-                            <i class="fa-2x far fa-heart"></i>
-                            <div class="restaurant__hand">
-                                <i class="fa-2x far fa-hand-pointer"></i>
-                            </div>
+                            <i class="fa-2x fas fa-heart restaurant__heart--yes"></i>
+                            <i class="fa-2x far fa-heart restaurant__heart--no"></i>
                         </div>
                     </div>
                 </a>
@@ -126,11 +132,9 @@
                                 Charonne
                             </p>
                         </div>
-                        <div class="restaurant__heart restaurant__heart--select">
-                            <i class="fa-2x fas fa-heart"></i>
-                            <div class="restaurant__hand restaurant__hand--select">
-                                <i class="fa-2x far fa-hand-pointer"></i>
-                            </div>
+                        <div class="restaurant__heart">
+                            <i class="fa-2x fas fa-heart restaurant__heart--yes"></i>
+                            <i class="fa-2x far fa-heart restaurant__heart--no"></i>
                         </div>
                     </div>
                 </a>
@@ -154,10 +158,8 @@
                             </p>
                         </div>
                         <div class="restaurant__heart">
-                            <i class="fa-2x far fa-heart"></i>
-                            <div class="restaurant__hand">
-                                <i class="fa-2x far fa-hand-pointer"></i>
-                            </div>
+                            <i class="fa-2x fas fa-heart restaurant__heart--yes"></i>
+                            <i class="fa-2x far fa-heart restaurant__heart--no"></i>
                         </div>
                     </div>
                 </a>
@@ -181,10 +183,8 @@
                             </p>
                         </div>
                         <div class="restaurant__heart">
-                            <i class="fa-2x far fa-heart"></i>
-                            <div class="restaurant__hand">
-                                <i class="fa-2x far fa-hand-pointer"></i>
-                            </div>
+                            <i class="fa-2x fas fa-heart restaurant__heart--yes"></i>
+                            <i class="fa-2x far fa-heart restaurant__heart--no"></i>
                         </div>
                     </div>
                 </a>

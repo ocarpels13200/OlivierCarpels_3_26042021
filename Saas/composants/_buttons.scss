@@ -5,6 +5,7 @@
     height: 60px;
     border-radius: 25px;
     color: white;
+    cursor: pointer;
     background: linear-gradient($secondaryColor, $primaryColor);
     transition: transform 1000ms cubic-bezier(0,1.28,.89,.85);
     &:hover{

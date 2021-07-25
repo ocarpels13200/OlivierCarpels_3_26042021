@@ -29,6 +29,7 @@
     padding: 50px 0px 50px 0px;
     &__title{
         text-align: center;
+        padding: 0px 50px;
     }
     &__subtitle{
         text-align: center;
@@ -40,8 +41,12 @@
     margin-left: 25px;
     margin-right: 25px;
     &__title{
-        margin-top: 50px;
-        margin-bottom: 30px;
+        margin: 0px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+    &__link{
+        text-decoration: none;
     }
     &__step{
         border: solid 1px $grey1;
@@ -53,12 +58,19 @@
 }
 .step{
     display: flex;
+    &:hover{
+        background-color: rgba($secondaryColor, 0.15);
+    }
+    &:hover .step__logo--select{
+        color: $primaryColor;
+        opacity: 1;
+    }
     &__number{
         display: flex;
         position: absolute;
         top: 10px;
         left: 0px;
-        color: #fff;
+        color: $white;
         align-items: center;
         height: 10px;
         border: solid 1px $primaryColor;
@@ -70,22 +82,17 @@
         display: flex;
         align-items: center;
         margin-left: 50px;
+        color: $black;
         opacity: 0.7;
-        &--select{
-            color: $primaryColor;
-            opacity: 1;
-        }
     }
     &__paragraph{
+        color: $black;
         margin-left: 25px;
         text-align: left;
         font-weight: bold;
     }
-    &--select{
-        background-color: rgba($secondaryColor, 0.15);
-        border-radius: 50px;
-    }
 }
+
 .maintitle{
     margin-left: 25px;
     margin-top: 0px;
@@ -140,20 +147,19 @@
         position: absolute;
         right: 30px;
         top: 150px;
-        opacity: 0.5;
-        &--select{
+        &--yes{
+            display: none;
             color: $primaryColor;
             opacity: 1;
         }
-    }
-    &__hand{
-        display: none;
-        &--select{
+        &--no{
+            opacity: 0.5;
+        }
+        &:hover .restaurant__heart--yes{
             display: block;
-            position: absolute;
-            top: 15px;
-            right: -12px;
-            color: #000;
+        }
+        &:hover .restaurant__heart--no{
+            display: none;
         }
     }
 }
