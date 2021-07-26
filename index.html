@@ -38,8 +38,8 @@
             <h2 class="functionality__title">
                 Fonctionnement
             </h2>
-            <a href="#main" class="functionality__link">
-                <div class="functionality__step">
+            <div class="functionality__step">
+                <a href="#main" class="functionality__link">
                     <div class="step">
                         <div class="step__number">
                             <span>1</span>
@@ -51,10 +51,10 @@
                             Choisissez un restaurant
                         </p>
                     </div>
-                </div>
-            </a>
-            <a href="#" class="functionality__link">
-                <div class="functionality__step">
+                </a>
+            </div>
+            <div class="functionality__step">
+                <a href="#" class="functionality__link">
                     <div class="step">
                         <div class="step__number">
                             <span>2</span>
@@ -66,10 +66,10 @@
                             Composez votre menu
                         </p>
                     </div>
-                </div>
-            </a>
-            <a href="#" class="functionality__link">
-                <div class="functionality__step">
+                </a>
+            </div>
+            <div class="functionality__step">
+                <a href="#" class="functionality__link">
                     <div class="step">
                         <div class="step__number">
                             <span>3</span>
@@ -81,8 +81,8 @@
                             Dégustez au restaurant
                         </p>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </section>
         <!--Selection de restaurants-->
         <main id="main">
@@ -109,8 +109,10 @@
                                 </p>
                             </div>
                             <div class="restaurant__heart">
-                                <i class="fa-2x fas fa-heart restaurant__heart--yes"></i>
-                                <i class="fa-2x far fa-heart restaurant__heart--no"></i>
+                                <div class="heartposition">
+                                    <i class="fa-2x fas fa-heart restaurant__heart--yes"></i>
+                                    <i class="fa-2x far fa-heart restaurant__heart--no"></i>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -226,7 +228,7 @@
                         </li>
                     </ul>
                 </a>
-                <a href="mailto:contact@ohmyfood.fr">
+                <a href="mailto:contact@ohmyfood.fr" class="link">
                     <ul class="nav">
                         <li>
                             <div>

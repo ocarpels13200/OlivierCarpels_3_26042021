@@ -1,13 +1,13 @@
 .presentation__button{
     display: block;
     margin: auto;
-    width: 60%;
-    height: 60px;
+    width: 40%;
+    height: 50px;
     border-radius: 25px;
     color: white;
     cursor: pointer;
     background: linear-gradient($secondaryColor, $primaryColor);
-    transition: transform 1000ms cubic-bezier(0,1.28,.89,.85);
+    transition: transform 400ms ease-in-out;
     &:hover{
         transform: scale(1.15);
         background: linear-gradient($primaryColor, $secondaryColor);

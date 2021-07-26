@@ -49,7 +49,7 @@
         text-decoration: none;
     }
     &__step{
-        max-width: 400px;
+        max-width: 375px;
         border: solid 1px $grey1;
         box-shadow: 10px 10px 7px $grey1;
         border-radius: 25px;
@@ -61,6 +61,7 @@
     display: flex;
     &:hover{
         background-color: rgba($secondaryColor, 0.15);
+        border-radius: 25px;
     }
     &:hover .step__logo--select{
         color: $primaryColor;
@@ -148,19 +149,33 @@
         position: absolute;
         right: 30px;
         top: 150px;
+        & .heartposition{
+            position: relative;
+        }
         &--yes{
-            display: none;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: -1;
             color: $primaryColor;
-            opacity: 1;
+            opacity: 0;
+            transition: opacity 4s;
         }
         &--no{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: 1;
             opacity: 0.5;
+            transition: opacity 4s;
         }
         &:hover .restaurant__heart--yes{
-            display: block;
+            z-index: 1;
+            opacity: 1;
         }
         &:hover .restaurant__heart--no{
-            display: none;
+            z-index: -1;
+            opacity: 0;
         }
     }
 }
