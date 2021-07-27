@@ -41,3 +41,21 @@
         margin: 5px 0px;
     }
 }
+@media screen and (min-width: 600px) and (max-width: 1023px){  /*Mode tablette*/
+    .footer{        
+        @include tablettemode;
+    &__nav{
+        display: flex;
+        justify-content: space-evenly;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {  /*Mode Desktop*/
+    .footer{        
+        @include desktopmode;
+        &__nav{
+            display: flex;
+            justify-content: space-evenly;
+            }
+    }
+}

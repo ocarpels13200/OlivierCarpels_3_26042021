@@ -1,3 +1,11 @@
+@mixin tablettemode{
+    max-width: 750px;
+    margin: auto;
+}
+@mixin desktopmode{
+    max-width: 1024px;
+    margin: auto;
+}
 @mixin font1 {
     font-family: 'Shrikhand', cursive;
 }
