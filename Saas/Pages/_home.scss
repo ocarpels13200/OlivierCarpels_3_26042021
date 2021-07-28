@@ -158,7 +158,7 @@
             z-index: -1;
             color: $primaryColor;
             opacity: 0;
-            transition: opacity 2s;
+            transition: opacity 1.5s;
         }
         &--no{
             position: absolute;
@@ -166,7 +166,7 @@
             top: -20px;
             z-index: 1;
             opacity: 0.5;
-            transition: opacity 2s;
+            transition: opacity 1.5s;
         }
         &:hover .restaurant__heart--yes{
             z-index: 1;

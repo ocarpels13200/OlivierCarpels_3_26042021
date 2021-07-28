@@ -29,3 +29,11 @@
         background: linear-gradient($primaryColor, $secondaryColor);
     }
 }
+@media screen and (min-width: 600px) {  /*Mode tablette et desktop*/
+    .presentation__button{
+        width: 40%;
+    }
+    .menu__button{
+        width: 40%;
+    }
+}

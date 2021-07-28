@@ -4,45 +4,53 @@
         @include restaurantMenuPicture;
     }
 }
-#mainMenu{
+.mainMenu{
     background-color: #eaeaea;
     border: solid 2px #EAEAEA;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    margin-top: -60px;
     position: relative;
     z-index: 10;
+    margin-top: -60px;
 }
 .menu{
     &__restaurant{
         display: flex;
     }
     &__title{
+        flex-basis: 80%;
         @include font1;
         font-size: $titlefontsize;
         font-weight: bold;
         margin-left: 15px;
-        padding-top: 25px;
     }
     &__heart{
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 40px;
-        right: 30px;
+        flex-basis: 20%;
+        position: relative;
         &--yes{
-            display: none;
+            position: absolute;
+            right: 115px;
+            top: 17px;
+            z-index: -1;
             color: $primaryColor;
-            opacity: 1;
+            opacity: 0;
+            transition: opacity 1.5s;
         }
         &--no{
-            opacity: 0.6;
+            position: absolute;
+            right: 115px;
+            top: 17px;
+            z-index: 1;
+            opacity: 0.5;
+            transition: opacity 1.5s;
         }
         &:hover .menu__heart--yes{
-            display: block;
+            z-index: 1;
+            opacity: 1;
         }
         &:hover .menu__heart--no{
-            display: none;
+            z-index: -1;
+            opacity: 0;
         }
     }
     &__firstcourse{
@@ -50,11 +58,12 @@
         background-color: #fff;
         border-radius: 10px;
         margin: 10px 15px;
+        animation: menuanimation 1.5s both;
     }
     &__firstcoursetitle{
         position: relative;
-        margin-bottom: 45px;
-        margin-left: 15px;
+        margin: 0px 0px 45px 15px;
+        padding-top: 20px;
         &::before{
             content: "";
             position: absolute;
@@ -90,10 +99,12 @@
         background-color: #fff;
         border-radius: 10px;
         margin: 10px 15px;
+        animation: menuanimation 1.5s 1.5s both;
     }
     &__maincoursetitle{
         position: relative;
-        margin : 45px 0px 45px 15px;
+        margin: 0px 0px 45px 15px;
+        padding-top: 20px;
         &::before{
             content: "";
             position: absolute;
@@ -109,10 +120,12 @@
         background-color: #fff;
         border-radius: 10px;
         margin: 10px 15px;
+        animation: menuanimation 1.5s 3s both;
     }
     &__desserttitle{
         position: relative;
-        margin : 45px 0px 45px 15px;
+        margin: 0px 0px 45px 15px;
+        padding-top: 20px;
         &::before{
             content: "";
             position: absolute;
@@ -122,5 +135,96 @@
             width: 50px;
             background-color: $tertiaryColor;
         }
+    }
+}
+@keyframes menuanimation {
+    0% {
+        transform: translateX(4000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 599px){   /*Mode mobile*/
+    .menu__heart--no{
+        right: 30px;
+    }
+    .menu__heart--yes{
+        right: 30px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1023px){  /*Mode tablette*/
+    .restaurantpicture{
+        @include tablettemode;
+    }
+    .mainMenu{
+        @include tablettemode;
+        margin-top: -60px;
+    }
+    .menu__firstcourse{
+        width: 90%;
+    }
+    .menu__maincourse{
+        width: 90%;
+    }
+    .menu__dessert{
+        width: 90%;
+    }
+    .responsive{
+        display: flex;
+        flex-wrap: wrap;
+        &__firstcourse{
+            flex-basis: 50%;
+            margin: 0;
+        }
+        &__maincourse{
+            flex-basis: 50%;
+            margin: 0;
+        }
+        &__dessert{
+            flex-basis: 50%;
+            margin: 0;
+        }
+    }
+    .footer{
+        @include tablettemode
+    }
+}
+@media screen and (min-width: 1024px) {  /*Mode Desktop*/
+    .restaurantpicture{
+        @include desktopmode;
+    }
+    .mainMenu{
+        @include desktopmode;
+        margin-top: -60px;
+    }
+    .menu__firstcourse{
+        width: 90%;
+    }
+    .menu__maincourse{
+        width: 90%;
+    }
+    .menu__dessert{
+        width: 90%;
+    }
+    .responsive{
+        display: flex;
+        flex-wrap: wrap;
+        &__firstcourse{
+            flex-basis: 33.33%;
+            margin: 0;
+        }
+        &__maincourse{
+            flex-basis: 33.33%;
+            margin: 0;
+        }
+        &__dessert{
+            flex-basis: 33.33%;
+            margin: 0;
+        }
+    }
+    .footer{
+        @include desktopmode
     }
 }
