@@ -1,4 +1,4 @@
-.presentation__button{
+.presentation__button{ /*Bouton page d'accueil*/
     display: block;
     margin: auto;
     width: 60%;
@@ -7,10 +7,12 @@
     color: white;
     cursor: pointer;
     background: linear-gradient($secondaryColor, $primaryColor);
+    box-shadow: 10px 10px 25px grey;
     transition: transform 400ms ease-in-out;
-    &:hover{
-        transform: scale(1.15);
-        background: linear-gradient($primaryColor, $secondaryColor);
+    &:hover{ /*Animation du bouton, agrandissement, éclaircissement, ombre portée*/
+        transform: scale(1.05);
+        background: linear-gradient(lighten($secondaryColor, 2%), lighten($primaryColor, 2%));
+        box-shadow: 10px 10px 25px grey;
     }
 }
 .menu__button{

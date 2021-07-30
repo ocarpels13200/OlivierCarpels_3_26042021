@@ -9,6 +9,14 @@
         <title>ohmyfood - Réservez le menu qui vous convient</title>
     </head>
     <body>
+        <!--Loading spinner-->
+        <div class="loading">
+            <div class="loading__spinner">
+                <div class="loading__spinner--action">
+                </div>
+            </div>
+        </div>
+        <!--En-tête, Logo-->
         <header class="header">
             <a href="./index.html" class="header__logo">
                 <figure>
@@ -18,9 +26,9 @@
         </header>
         <!--Localisation des restaurants-->
         <section class="localize">
-            <div class="localize__container ">
-                <i class="fas fa-map-marker-alt localize__logo"></i>
-                <input type="text" name="localize__town" class="localize__town" placeholder="Paris, Belleville">
+            <div class="localize__container container">
+                <i class="fas fa-map-marker-alt container__logo"></i>
+                <input type="text" name="localize__town" class="container__town" placeholder="Paris, Belleville">
             </div>
         </section>
         <!--Présentation de l'entreprise-->
@@ -38,10 +46,11 @@
             <h2 class="functionality__title">
                 Fonctionnement
             </h2>
-            <div id="step">
-                <div class="functionality__step">
-                    <a href="#main" class="functionality__link">
-                        <div class="step">
+            <!--Boutons étapes-->
+            <div class="functionality__step">
+                <div class="step">
+                    <a href="#main" class="step__link">
+                        <div class="step__container">
                             <div class="step__number">
                                 <span>1</span>
                             </div>
@@ -54,9 +63,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="functionality__step">
-                    <a href="#" class="functionality__link">
-                        <div class="step">
+                <div class="step">
+                    <a href="#" class="step__link">
+                        <div class="step__container">
                             <div class="step__number">
                                 <span>2</span>
                             </div>
@@ -69,9 +78,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="functionality__step">
-                    <a href="#" class="functionality__link">
-                        <div class="step">
+                <div class="step">
+                    <a href="#" class="step__link">
+                        <div class="step__container">
                             <div class="step__number">
                                 <span>3</span>
                             </div>
@@ -194,6 +203,7 @@
                 </section>
             </div>
         </main>
+        <!--Début du pied de page-->
         <footer class="footer">
             <h2 class="footer__title">
                 ohmyfood

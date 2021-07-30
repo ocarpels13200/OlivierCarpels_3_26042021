@@ -1,5 +1,6 @@
-.localize{
+.localize{ /*Mise en page de l'outil de géolocalisation*/
     width: 100%;
+    margin: auto;
     background-color: $grey1;
     height: 70px;
     &__container{
@@ -8,15 +9,16 @@
         display: flex;
         height: 100%
     }
+}
+.container{
     &__logo{
+        flex: 0 0 20%;
         display: flex;
-        width: 20%;
+        justify-content: center;
         align-items: center;
-        justify-content: right;
-        margin-right: 15px;
     }
     &__town{
-        width: 80%;
+        flex: 0 0 80%;
         @include font2;
         font-size: $paragraphfontsize;
         text-align: left;
@@ -24,7 +26,7 @@
         border: transparent;
     }
 }
-.presentation{
+.presentation{ /*Mise en page de la présentation de l'entreprise*/
     background-color: $grey2;
     padding: 50px 0px 50px 0px;
     &__title{
@@ -37,7 +39,7 @@
         margin-bottom: 30px;
     }
 }
-.functionality{
+.functionality{ /*Mise en page des fonctionnalités du site*/
     margin-left: 25px;
     margin-right: 25px;
     &__title{
@@ -45,21 +47,14 @@
         padding-top: 50px;
         padding-bottom: 30px;
     }
-    &__link{
-        text-decoration: none;
-    }
-    &__step{
-        max-width: 375px;
-        padding-right: 15px;
-        border: solid 1px $grey1;
-        box-shadow: 10px 10px 7px $grey1;
-        border-radius: 25px;
-        position: relative;
-        margin-bottom: 30px;
-    }
 }
-.step{
-    display: flex;
+.step{ /*Mise en page des boites fonctionnalités du site*/
+    width: 250px;
+    border: solid 1px $grey1;
+    box-shadow: 10px 10px 7px $grey1;
+    border-radius: 25px;
+    position: relative;
+    margin-bottom: 30px;
     &:hover{
         background-color: rgba($secondaryColor, 0.15);
         border-radius: 25px;
@@ -68,10 +63,16 @@
         color: $primaryColor;
         opacity: 1;
     }
+    &__link{
+        text-decoration: none;
+    }
+    &__container{
+        display: flex;
+    }
     &__number{
         display: flex;
         position: absolute;
-        top: 10px;
+        top: 6px;
         left: 0px;
         color: $white;
         align-items: center;
@@ -95,6 +96,7 @@
         font-weight: bold;
     }
 }
+/*Début du main, selection des restaurants*/
 .maintitle{
     margin-left: 25px;
     margin-top: 0px;
@@ -186,18 +188,15 @@
     .presentation{
         @include tablettemode
     }
-    #step{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
     .functionality{
         @include tablettemode;
         &__title{
             margin-left: 25px;
         }
         &__step{
-            margin-left: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
     }
     #main{
@@ -215,17 +214,15 @@
     .presentation{
         @include desktopmode
     }
-    #step{
-        display: flex;
-        justify-content: center;
-    }
     .functionality{
         @include desktopmode;
         &__title{
             margin-left: 25px;
         }
         &__step{
-            margin-left: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
     }
     #main{
