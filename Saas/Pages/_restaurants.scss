@@ -1,10 +1,10 @@
-.restaurantpicture{
+.restaurantpicture{ /*Mise en page de l'image*/
     @include restaurantMenuContainer;
     & > img{
         @include restaurantMenuPicture;
     }
 }
-.mainMenu{
+.mainMenu{ /*Mise en page générale de la partie restaurant, titre, menus et bouton*/
     background-color: #eaeaea;
     border: solid 2px #EAEAEA;
     border-top-left-radius: 50px;
@@ -17,14 +17,13 @@
     &__restaurant{
         display: flex;
     }
-    &__title{
+    &__title{ /*Mise en page du titre */
         flex-basis: 80%;
         @include font1;
-        font-size: $titlefontsize;
         font-weight: bold;
         margin-left: 15px;
     }
-    &__heart{
+    &__heart{ /*Mise en page du coeur */
         flex-basis: 20%;
         position: relative;
         &--yes{
@@ -53,20 +52,21 @@
             opacity: 0;
         }
     }
-    &__firstcourse{
+
+    &__firstcourse{ /*Mise en page générale des entrées */
         border: solid #fff 1px;
         background-color: #fff;
         border-radius: 10px;
         margin: 15px 15px;
         height: 50px;
         &--fc01{
-            animation: menuanimation 0.5s 3s both;
+            animation: menuanimation 0.2s 2s both;
         }
         &--fc02{
-            animation: menuanimation 0.5s 3.5s both;
+            animation: menuanimation 0.2s 2.2s both;
         }
         &--fc03{
-            animation: menuanimation 0.5s 4s both;
+            animation: menuanimation 0.2s 2.4s both;
         }
     }
     &__firstcoursetitle{
@@ -83,71 +83,21 @@
             background-color: $tertiaryColor;
         }
     }
-    &__layout{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        &:hover .menu__layout3{
-            flex: 0 0 10%;
-            background-color: $tertiaryColor;
-            color: white;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: cocheanimation 0.5s both;
-        }
-        &:hover .menu__firstcourse--effect{
-            animation: rotatecocheanimation 0.3s 0.5s both;
-        }
-    }
-    &__layout1{
-        align-self: flex-end;
-        flex: 1 1 80%;
-        padding: 5px;
-        overflow: hidden;
-        & > p:first-child{
-            font-weight: bold;
-        }
-        & > p{
-            margin: 0px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-    }
-    &__layout2{
-        flex: 1 0 10%;
-        align-self: flex-end;
-        display: flex;
-        padding: 5px;
-        & > p{
-            margin: 0px;
-        }
-        & > p:last-child{
-            font-weight: bold;
-        }
-    }
-    &__layout3{
-        display: none;
-    }
-    &__maincourse{
+
+    &__maincourse{ /*Mise en page générale des plats */
         border: solid #fff 1px;
         background-color: #fff;
         border-radius: 10px;
         margin: 15px 15px;
         height: 50px;
         &--mc01{
-            animation: menuanimation 0.5s 4.5s both;
+            animation: menuanimation 0.2s 2.6s both;
         }
         &--mc02{
-            animation: menuanimation 0.5s 5s both;
+            animation: menuanimation 0.2s 2.8s both;
         }
         &--mc03{
-            animation: menuanimation 0.5s 5.5s both;
+            animation: menuanimation 0.2s 3s both;
         }
     }
     &__maincoursetitle{
@@ -164,20 +114,21 @@
             background-color: $tertiaryColor;
         }
     }
-    &__dessert{
+
+    &__dessert{ /*Mise en page générale des desserts */
         border: solid #fff 1px;
         background-color: #fff;
         border-radius: 10px;
-        margin: 10px 15px;
+        margin: 15px 15px;
         height: 50px;
         &--d01{
-            animation: menuanimation 0.5s 6s both;
+            animation: menuanimation 0.2s 3.2s both;
         }
         &--d02{
-            animation: menuanimation 0.5s 6.5s both;
+            animation: menuanimation 0.2s 3.4s both;
         }
         &--d03{
-            animation: menuanimation 0.5s 7s both;
+            animation: menuanimation 0.2s 3.6s both;
         }
     }
     &__desserttitle{
@@ -194,7 +145,62 @@
             background-color: $tertiaryColor;
         }
     }
+
+    &__layout{ /*Mise en page générale des contenus */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        &:hover .menu__layout3{ /*Gestion apparition de la coche et animation*/
+            flex: 0 0 10%;
+            background-color: $tertiaryColor;
+            color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: cocheanimation 0.5s both;
+        }
+        &:hover .menu__firstcourse--effect{
+            animation: rotatecocheanimation 0.5s both;
+        }
+    }
+    &__layout1{ /*Mise en page nom du plat et description */
+        align-self: flex-end;
+        flex: 1 1 80%;
+        padding: 5px;
+        overflow: hidden;
+        & > p:first-child{
+            font-weight: bold;
+            font-size: $paragraphfontsize;
+        }
+        & > p{
+            margin: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: $paragraphfontsize_restaurants;
+        }
+    }
+    &__layout2{ /*Mise en page du prix */
+        flex: 1 0 10%;
+        align-self: flex-end;
+        display: flex;
+        padding: 5px;
+        & > p{
+            margin: 0px;
+            font-weight: bold;
+            font-size: $paragraphfontsize_restaurants;
+        }
+    }
+    &__layout3{ /*Mise en page de la coche */
+        display: none;
+    }
 }
+
+/*Animations des menus*/
 @keyframes menuanimation {
     0% {
         transform: translateY(20px);
@@ -205,6 +211,8 @@
         transform: translateY(0px);
     }
 }
+
+/*Animations de la coche*/
 @keyframes cocheanimation {
     0% {
         transform: translate(20px);
@@ -220,13 +228,14 @@
         transform: rotate(0deg);
     }
     50%{
-        transform: rotate(-30deg);
+        transform: rotate(-360deg);
     }
     100%{
         transform: rotate(0deg);
     }
 }
 
+/*Mode responsive*/
 @media screen and (max-width: 599px){   /*Mode mobile*/
     .menu__heart--no{
         right: 30px;
@@ -244,27 +253,27 @@
         margin-top: -60px;
     }
     .menu__firstcourse{
-        width: 90%;
+        max-width: 330px;
     }
     .menu__maincourse{
-        width: 90%;
+        max-width: 330px;
     }
     .menu__dessert{
-        width: 90%;
+        max-width: 330px;
     }
     .responsive{
         display: flex;
         flex-wrap: wrap;
         &__firstcourse{
-            flex-basis: 49%;
+            flex-basis: 50%;
             margin: 0;
         }
         &__maincourse{
-            flex-basis: 49%;
+            flex-basis: 50%;
             margin: 0;
         }
         &__dessert{
-            flex-basis: 49%;
+            flex-basis: 50%;
             margin: 0;
         }
     }

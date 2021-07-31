@@ -5,17 +5,17 @@
     z-index: 10;
     background: rgba(0,0,0,.4);
     display: flex;
-    animation: spinnerinvisible 1s 3.5s both;
+    animation: spinnerinvisible 0.5s 1.5s both;
     &__spinner{
-        height: 25px; 
+        height: 20px; 
         width: 250px;
         border: solid;
         margin: auto;        
         &--action{
-            height: 25px;
+            height: 20px;
             width: 0px;
             background: linear-gradient(#FF79DA, #9356DC);
-            animation: spinner 3s ease-in-out both;
+            animation: spinner 1.5s ease-in-out both;
         }
     }
 }

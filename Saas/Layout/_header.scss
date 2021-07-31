@@ -1,6 +1,8 @@
 .header {
     width: 100%;
+    height: 90px;
     display: flex;
+    align-items: center;
     margin: auto;
     &__return{
         display: flex;
