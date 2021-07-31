@@ -9,6 +9,14 @@
         <title>ohmyfood - Réservez le menu qui vous convient</title>
     </head>
     <body>
+        <!--Loading spinner-->
+        <div class="loading">
+            <div class="loading__spinner">
+                <div class="loading__spinner--action">
+                </div>
+            </div>
+        </div>
+        <!--En-tête, Bouton de retour, Logo-->
         <header class="header">
             <div class="header__return">
                 <a href="../../index.html">
@@ -21,11 +29,14 @@
                 </figure>
             </a>
         </header>
+        <!--Photo du restaurant-->
         <section class="restaurantpicture">
             <img src="../Images/Restaurants/francaise.jpg" alt="À la française" />
         </section>
-        <main id="mainMenu">
+        <!--Menu du restaurant-->
+        <main class="mainMenu">
             <section class="menu">
+                <!--Nom et coeur restaurant-->
                 <div class="menu__restaurant">
                     <h1 class="menu__title">
                         À la française
@@ -35,111 +46,150 @@
                         <i class="fa-2x far fa-heart menu__heart--no"></i>
                     </div>
                 </div>
-                <h2 class="menu__firstcoursetitle">
-                    ENTRÉES
-                </h2>
-                <div class="menu__firstcourse">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Tartare de poulpe acidulé</p>
-                            <p>Aux zests d'orange</p>
+                <!--Gestion du mode responsive pour les menus-->
+                <div class="responsive">
+                    <!--Début des entrées-->
+                    <div class="responsive__firstcourse">
+                        <h2 class="menu__firstcoursetitle">
+                            ENTRÉES
+                        </h2>
+                        <div class="menu__firstcourse menu__firstcourse--fc01">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Tartare de poulpe acidulé</p>
+                                    <p>Aux zests d'orange</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>25 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu__layout2">
-                            <p>25 &euro;</p>
+                        <div class="menu__firstcourse menu__firstcourse--fc02">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Velouté de légumes d'antan</p>
+                                    <p>Carotte, panais, topinambour</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>35 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="menu__firstcourse">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Velouté de légumes d'antan</p>
-                            <p>Carotte, panais, topinambour</p>
-                        </div>
-                        <div class="menu__layout2">
-                            <p>35 &euro;</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__firstcourse">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Soupe à l'oignon</p>
-                            <p>Revisitée</p>
-                        </div>
-                        <div class="menu__layout2">
-                            <p>20 &euro;</p>
-                        </div>
-                    </div>
-                </div>
-                <h2 class="menu__maincoursetitle">
-                    PLATS
-                </h2>
-                <div class="menu__maincourse">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Coquilles Saint-Jacques</p>
-                            <p>Accompagnées d'une purée de panais</p>
-                        </div>
-                        <div class="menu__layout2">
-                            <p>40 &euro;</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__maincourse">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Magret de canard</p>
-                            <p>et parmentier de pommes de terres</p>
-                        </div>
-                        <div class="menu__layout2">
-                            <p>35 &euro;</p>
+                        <div class="menu__firstcourse menu__firstcourse--fc03">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Soupe à l'oignon</p>
+                                    <p>Revisitée</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>20 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="menu__maincourse">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Pigeonneau d'Ille-et-Vilaine</p>
-                            <p>Sur son lit de gnocchis aux légumes</p>
+                     <!--Début des plats-->
+                     <div class="responsive__maincourse">
+                        <h2 class="menu__maincoursetitle">
+                            PLATS
+                        </h2>
+                        <div class="menu__maincourse menu__maincourse--mc01">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Coquilles Saint-Jacques</p>
+                                    <p>Accompagnées d'une purée de panais</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>40 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu__layout2">
-                            <p>44 &euro;</p>
+                        <div class="menu__maincourse menu__maincourse--mc02">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Magret de canard</p>
+                                    <p>et parmentier de pommes de terres</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>35 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__maincourse menu__maincourse--mc03">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Pigeonneau d'Ille-et-Vilaine</p>
+                                    <p>Sur son lit de gnocchis aux légumes</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>44 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <h2 class="menu__desserttitle">
-                    DESSERTS
-                </h2>
-                <div class="menu__dessert">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Pétales de violettes glacés</p>
-                            <p>Et purée de noisettes</p>
+                    <!--Début des desserts-->
+                    <div class="responsive__dessert">
+                        <h2 class="menu__desserttitle">
+                            DESSERTS
+                        </h2>
+                        <div class="menu__dessert menu__dessert--d01">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Pétales de violettes glacés</p>
+                                    <p>Et purée de noisettes</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>18 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu__layout2">
-                            <p>18 &euro;</p>
+                        <div class="menu__dessert menu__dessert--d02">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Fondant au chocolat</p>
+                                    <p>Revisité</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>22 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="menu__dessert">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Fondant au chocolat</p>
-                            <p>Revisité</p>
-                        </div>
-                        <div class="menu__layout2">
-                            <p>22 &euro;</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu__dessert">
-                    <div class="menu__layout">
-                        <div class="menu__layout1">
-                            <p>Millefeuille croustillant</p>
-                            <p>Myrtilles et pâte d'amande</p>
-                        </div>
-                        <div class="menu__layout2">
-                            <p>23 &euro;</p>
+                        <div class="menu__dessert menu__dessert--d03">
+                            <div class="menu__layout">
+                                <div class="menu__layout1">
+                                    <p>Millefeuille croustillant</p>
+                                    <p>Myrtilles et pâte d'amande</p>
+                                </div>
+                                <div class="menu__layout2">
+                                    <p>23 &euro;</p>
+                                </div>
+                                <div class="menu__layout3">
+                                    <i class="fas fa-check-circle menu__firstcourse--effect"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
