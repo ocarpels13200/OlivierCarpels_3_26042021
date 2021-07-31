@@ -10,7 +10,7 @@
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     position: relative;
-    z-index: 10;
+    z-index: 5;
     margin-top: -60px;
 }
 .menu{
@@ -57,9 +57,17 @@
         border: solid #fff 1px;
         background-color: #fff;
         border-radius: 10px;
-        margin: 10px 15px;
-        height: 45px;
-        animation: menuanimation 1.5s both;
+        margin: 15px 15px;
+        height: 50px;
+        &--fc01{
+            animation: menuanimation 0.5s 3s both;
+        }
+        &--fc02{
+            animation: menuanimation 0.5s 3.5s both;
+        }
+        &--fc03{
+            animation: menuanimation 0.5s 4s both;
+        }
     }
     &__firstcoursetitle{
         position: relative;
@@ -78,51 +86,69 @@
     &__layout{
         display: flex;
         justify-content: space-between;
-        position: relative;
         width: 100%;
-        height: 45px;
+        height: 100%;
         cursor: pointer;
+        &:hover .menu__layout3{
+            flex: 0 0 10%;
+            background-color: $tertiaryColor;
+            color: white;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: cocheanimation 0.5s both;
+        }
+        &:hover .menu__firstcourse--effect{
+            animation: rotatecocheanimation 0.3s 0.5s both;
+        }
     }
     &__layout1{
-        align-self: center;
-        flex: 0 0 85%;
+        align-self: flex-end;
+        flex: 1 1 80%;
+        padding: 5px;
+        overflow: hidden;
         & > p:first-child{
             font-weight: bold;
         }
         & > p{
-            padding-left: 8px;
             margin: 0px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
     &__layout2{
+        flex: 1 0 10%;
         align-self: flex-end;
         display: flex;
+        padding: 5px;
         & > p{
             margin: 0px;
-            padding-left: 8px;
         }
         & > p:last-child{
-            padding-left: 10px;
             font-weight: bold;
         }
     }
     &__layout3{
-        flex: 0 0 15%;
-        background-color: $tertiaryColor;
-        color: white;
-        height: 45px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
     &__maincourse{
         border: solid #fff 1px;
         background-color: #fff;
         border-radius: 10px;
-        margin: 10px 15px;
-        animation: menuanimation 1.5s 1.5s both;
+        margin: 15px 15px;
+        height: 50px;
+        &--mc01{
+            animation: menuanimation 0.5s 4.5s both;
+        }
+        &--mc02{
+            animation: menuanimation 0.5s 5s both;
+        }
+        &--mc03{
+            animation: menuanimation 0.5s 5.5s both;
+        }
     }
     &__maincoursetitle{
         position: relative;
@@ -143,7 +169,16 @@
         background-color: #fff;
         border-radius: 10px;
         margin: 10px 15px;
-        animation: menuanimation 1.5s 3s both;
+        height: 50px;
+        &--d01{
+            animation: menuanimation 0.5s 6s both;
+        }
+        &--d02{
+            animation: menuanimation 0.5s 6.5s both;
+        }
+        &--d03{
+            animation: menuanimation 0.5s 7s both;
+        }
     }
     &__desserttitle{
         position: relative;
@@ -162,10 +197,33 @@
 }
 @keyframes menuanimation {
     0% {
-        transform: translateX(4000px);
+        transform: translateY(20px);
+        opacity: 0;
     }
     100%{
-        transform: translateX(0px);
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes cocheanimation {
+    0% {
+        transform: translate(20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes rotatecocheanimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    100%{
+        transform: rotate(0deg);
     }
 }
 
@@ -198,15 +256,15 @@
         display: flex;
         flex-wrap: wrap;
         &__firstcourse{
-            flex-basis: 50%;
+            flex-basis: 49%;
             margin: 0;
         }
         &__maincourse{
-            flex-basis: 50%;
+            flex-basis: 49%;
             margin: 0;
         }
         &__dessert{
-            flex-basis: 50%;
+            flex-basis: 49%;
             margin: 0;
         }
     }

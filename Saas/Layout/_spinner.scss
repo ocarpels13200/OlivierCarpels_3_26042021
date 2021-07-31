@@ -7,12 +7,12 @@
     display: flex;
     animation: spinnerinvisible 1s 3.5s both;
     &__spinner{
-        height: 30px; 
+        height: 25px; 
         width: 250px;
         border: solid;
         margin: auto;        
         &--action{
-            height: 30px;
+            height: 25px;
             width: 0px;
             background: linear-gradient(#FF79DA, #9356DC);
             animation: spinner 3s ease-in-out both;
