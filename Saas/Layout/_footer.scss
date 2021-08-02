@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     padding-bottom: 30px;
+    position: relative;
     &__title{
         color: #fff;
         @include font1;
@@ -45,7 +46,6 @@
 }
 @media screen and (min-width: 600px) and (max-width: 1023px){  /*Mode tablette*/
     .footer{        
-        @include tablettemode;
     &__nav{
         display: flex;
         justify-content: space-evenly;
@@ -53,11 +53,17 @@
     }
 }
 @media screen and (min-width: 1024px) {  /*Mode Desktop*/
-    .footer{        
-        @include desktopmode;
+    .footer{
+        &__title{
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
         &__nav{
+            max-width: 1100px;
+            margin: auto;
             display: flex;
             justify-content: space-evenly;
-            }
-    }
+        }
+    }   
 }

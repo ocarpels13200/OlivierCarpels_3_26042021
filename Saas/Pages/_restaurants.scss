@@ -258,9 +258,6 @@
     }
 }
 @media screen and (min-width: 600px) and (max-width: 1023px){  /*Mode tablette*/
-    .restaurantpicture{
-        @include tablettemode;
-    }
     .mainMenu{
         @include tablettemode;
         margin-top: -60px;
@@ -295,9 +292,6 @@
     }
 }
 @media screen and (min-width: 1024px) {  /*Mode Desktop*/
-    .restaurantpicture{
-        @include desktopmode;
-    }
     .mainMenu{
         @include desktopmode;
         margin-top: -60px;
