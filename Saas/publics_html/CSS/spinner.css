@@ -1,2 +1,0 @@
-.loading{position:absolute;margin:auto;height:100%;width:100%;z-index:10;background:rgba(0,0,0,0.4);display:-webkit-box;display:-ms-flexbox;display:flex}.loading__spinner{height:30px;width:250px;border:solid;margin:auto}.loading__spinner--action{height:30px;width:250px;background:-webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));background:linear-gradient(#FF79DA, #9356DC)}
-/*# sourceMappingURL=spinner.css.map */

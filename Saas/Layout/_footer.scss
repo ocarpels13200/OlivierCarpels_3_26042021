@@ -1,4 +1,4 @@
-.footer{
+.foot{
     background-color: $fifthColor;
     margin: 0px;
     padding: 0px;
@@ -45,24 +45,29 @@
     }
 }
 @media screen and (min-width: 600px) and (max-width: 1023px){  /*Mode tablette*/
-    .footer{        
-    &__nav{
-        max-width: 750px;
-        margin: auto;
-        display: flex;
-        justify-content: space-evenly;
+    .foot{   
+        &__title{
+            @include tablettemode;
+            margin: auto;
+            text-align: center;
+        }     
+        &__nav{
+            @include tablettemode;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
         }
     }
 }
 @media screen and (min-width: 1024px) {  /*Mode Desktop*/
-    .footer{
+    .foot{
         &__title{
-            max-width: 1100px;
+            @include desktopmode;
             margin: auto;
             text-align: center;
         }
         &__nav{
-            max-width: 1100px;
+            @include desktopmode;
             margin: auto;
             display: flex;
             justify-content: space-evenly;

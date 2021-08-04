@@ -97,14 +97,13 @@
     }
 }
 /*Début du main, selection des restaurants*/
-.maintitle{
+.maintitle > h2{
     margin-left: 25px;
-    margin-top: 0px;
 }
 .restaurant{
     border: transparent;
     background-color: #fff;
-    margin: 15px 25px;
+    margin: 25px;
     border-radius: 25px;
     position: relative;
     & > a{
@@ -182,12 +181,6 @@
 }
 /*Media queries*/
 @media screen and (min-width: 600px) and (max-width: 1023px){  /*Mode tablette*/
-    .localize{
-        @include tablettemode
-    }
-    .presentation{
-        @include tablettemode
-    }
     .functionality{
         @include tablettemode;
         &__title{
@@ -199,21 +192,16 @@
             justify-content: space-around;
         }
     }
-    #main{
-        @include tablettemode
+    .maintitle{
+        @include tablettemode;
     }
     .tablette{
+        @include tablettemode;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
 @media screen and (min-width: 1024px) {  /*Mode Desktop*/
-    .localize{
-        @include desktopmode
-    }
-    .presentation{
-        @include desktopmode
-    }
     .functionality{
         @include desktopmode;
         &__title{
@@ -225,10 +213,11 @@
             justify-content: space-around;
         }
     }
-    #main{
-        @include desktopmode
+    .maintitle{
+        @include desktopmode;
     }
-    .tablette{
+    .desktop{
+        @include desktopmode;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }

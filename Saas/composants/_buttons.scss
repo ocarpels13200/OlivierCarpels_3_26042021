@@ -12,7 +12,7 @@
     &:hover{ /*Animation du bouton, agrandissement, éclaircissement, ombre portée*/
         transform: scale(1.05);
         background: linear-gradient(lighten($secondaryColor, 2%), lighten($primaryColor, 2%));
-        box-shadow: 10px 10px 25px grey;
+        box-shadow: 10px 10px 20px grey;
     }
 }
 .menu__button{
@@ -24,11 +24,14 @@
     height: 50px;
     border-radius: 25px;
     color: white;
+    cursor: pointer;
     background: linear-gradient($secondaryColor, $primaryColor);
-    transition: transform 1000ms cubic-bezier(0,1.28,.89,.85);
-    &:hover{
-        transform: scale(1.15);
-        background: linear-gradient($primaryColor, $secondaryColor);
+    box-shadow: 10px 10px 25px grey;
+    transition: transform 400ms ease-in-out;
+    &:hover{ /*Animation du bouton, agrandissement, éclaircissement, ombre portée*/
+        transform: scale(1.05);
+        background: linear-gradient(lighten($secondaryColor, 2%), lighten($primaryColor, 2%));
+        box-shadow: 10px 10px 20px grey;
     }
 }
 @media screen and (min-width: 600px) {  /*Mode tablette et desktop*/
