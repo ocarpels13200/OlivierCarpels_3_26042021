@@ -59,21 +59,23 @@
         border-radius: 10px;
         margin: 15px 15px;
         height: 50px;
-        &--fc01{
-            animation: menuanimation 0.2s 2s both;
-        }
-        &--fc02{
-            animation: menuanimation 0.2s 2.2s both;
-        }
-        &--fc03{
-            animation: menuanimation 0.2s 2.4s both;
+        /*Gestion animations plats - boucle*/
+        opacity: 0;
+        transform: translateY(20px);
+        animation: menuanimation $anim-speed linear;
+        animation-fill-mode:forwards;
+        animation-delay: 0s;
+        @for $i from 1 through 6{
+        &:nth-child(#{$i}){
+            animation-delay: $i * 0.15s;
+            }
         }
     }
     &__firstcoursetitle{
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-        animation: menutitleanimation 0.6s both;
+        animation: menutitleanimation 0.3s both;
         &::before{
             content: "";
             position: absolute;
@@ -91,21 +93,22 @@
         border-radius: 10px;
         margin: 15px 15px;
         height: 50px;
-        &--mc01{
-            animation: menuanimation 0.2s 2.6s both;
-        }
-        &--mc02{
-            animation: menuanimation 0.2s 2.8s both;
-        }
-        &--mc03{
-            animation: menuanimation 0.2s 3s both;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: menuanimation $anim-speed linear;
+        animation-fill-mode:forwards;
+        animation-delay: 0s;
+        @for $i from 1 through 4{
+        &:nth-child(#{$i}){
+            animation-delay: $i * 0.15s;
+            }
         }
     }
     &__maincoursetitle{
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-        animation: menutitleanimation 0.6s 0.6s both;
+        animation: menutitleanimation 0.3s both;
         &::before{
             content: "";
             position: absolute;
@@ -116,29 +119,28 @@
             background-color: $tertiaryColor;
         }
     }
-
     &__dessert{ /*Mise en page générale des desserts */
         border: solid #fff 1px;
         background-color: #fff;
         border-radius: 10px;
         margin: 15px 15px;
         height: 50px;
-        &--d01{
-            animation: menuanimation 0.2s 3.2s both;
-        }
-        &--d02{
-            animation: menuanimation 0.2s 3.4s both;
-        }
-        &--d03{
-            animation: menuanimation 0.2s 3.6s both;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: menuanimation $anim-speed linear;
+        animation-fill-mode:forwards;
+        animation-delay: 0s;
+        @for $i from 1 through 4{
+        &:nth-child(#{$i}){
+            animation-delay: $i * 0.15s;
+            }
         }
     }
     &__desserttitle{
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-
-        animation: menutitleanimation 0.6s 1.2s both;
+        animation: menutitleanimation 0.3s both;
         &::before{
             content: "";
             position: absolute;
@@ -215,10 +217,6 @@
     }
 }
 @keyframes menuanimation {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
     100%{
         opacity: 1;
         transform: translateY(0px);
