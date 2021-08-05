@@ -1,24 +1,45 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .localize{ /*Mise en page de l'outil de géolocalisation*/
     width: 100%;
     margin: auto;
     background-color: $grey1;
     height: 70px;
     &__container{
+        width: -webkit-max-content;
+        width: -moz-max-content;
         width: max-content;
         margin: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         height: 100%
     }
 }
 .container{
     &__logo{
-        flex: 0 0 20%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 20%;
+                flex: 0 0 20%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     &__town{
-        flex: 0 0 80%;
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 80%;
+                flex: 0 0 80%;
         @include font2;
         font-size: $paragraphfontsize;
         text-align: left;
@@ -51,7 +72,8 @@
 .step{ /*Mise en page des boites fonctionnalités du site*/
     width: 300px;
     border: solid 1px $grey1;
-    box-shadow: 10px 10px 7px $grey1;
+    -webkit-box-shadow: 10px 10px 7px $grey1;
+            box-shadow: 10px 10px 7px $grey1;
     border-radius: 25px;
     position: relative;
     margin-bottom: 30px;
@@ -67,15 +89,21 @@
         text-decoration: none;
     }
     &__container{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     &__number{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: absolute;
         top: 10px;
         left: 0px;
         color: $white;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         height: 10px;
         border: solid 1px $primaryColor;
         border-radius: 50px;
@@ -83,8 +111,12 @@
         background-color: $primaryColor;
     }
     &__logo{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin-left: 50px;
         color: $black;
         opacity: 0.7;
@@ -119,11 +151,19 @@
     }
     &__new{
         color: $fourthColor;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         font-weight: bolder;
         border: transparent;
+        height: -webkit-min-content;
+        height: -moz-min-content;
         height: min-content;
         background-color: $tertiaryColor;
         border-radius: 5px;
@@ -134,11 +174,16 @@
         height: 30px;
     }
     &__ID{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     &__description{
-        flex-basis: 80%;
+        -ms-flex-preferred-size: 80%;
+            flex-basis: 80%;
         margin: 15px 0px 15px 15px;
     }
     &__name{
@@ -150,7 +195,8 @@
         padding: 0px 0px 15px 0px;
     }
     &__heart{
-        flex-basis: 20%;
+        -ms-flex-preferred-size: 20%;
+            flex-basis: 20%;
         position: relative;
         &--yes{
             position: absolute;
@@ -159,6 +205,8 @@
             z-index: -1;
             color: $primaryColor;
             opacity: 0;
+            -webkit-transition: opacity 1.5s;
+            -o-transition: opacity 1.5s;
             transition: opacity 1.5s;
         }
         &--no{
@@ -167,6 +215,8 @@
             top: -20px;
             z-index: 1;
             opacity: 0.5;
+            -webkit-transition: opacity 1.5s;
+            -o-transition: opacity 1.5s;
             transition: opacity 1.5s;
         }
         &:hover .restaurant__heart--yes{
@@ -187,9 +237,13 @@
             margin-left: 25px;
         }
         &__step{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
         }
     }
     .maintitle{
@@ -197,7 +251,9 @@
     }
     .tablette{
         @include tablettemode;
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -208,9 +264,13 @@
             margin-left: 25px;
         }
         &__step{
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
         }
     }
     .maintitle{
@@ -218,7 +278,9 @@
     }
     .desktop{
         @include desktopmode;
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
 }

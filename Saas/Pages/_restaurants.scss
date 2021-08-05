@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .restaurantpicture{ /*Mise en page de l'image*/
     @include restaurantMenuContainer;
     & > img{
@@ -15,16 +22,20 @@
 }
 .menu{
     &__restaurant{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     &__title{ /*Mise en page du titre */
-        flex-basis: 80%;
+        -ms-flex-preferred-size: 80%;
+            flex-basis: 80%;
         @include font1;
         font-weight: bold;
         margin-left: 15px;
     }
     &__heart{ /*Mise en page du coeur */
-        flex-basis: 20%;
+        -ms-flex-preferred-size: 20%;
+            flex-basis: 20%;
         position: relative;
         &--yes{
             position: absolute;
@@ -33,6 +44,8 @@
             z-index: -1;
             color: $primaryColor;
             opacity: 0;
+            -webkit-transition: opacity 1.5s;
+            -o-transition: opacity 1.5s;
             transition: opacity 1.5s;
         }
         &--no{
@@ -41,6 +54,8 @@
             top: 17px;
             z-index: 1;
             opacity: 0.5;
+            -webkit-transition: opacity 1.5s;
+            -o-transition: opacity 1.5s;
             transition: opacity 1.5s;
         }
         &:hover .menu__heart--yes{
@@ -61,13 +76,19 @@
         height: 50px;
         /*Gestion animations plats - boucle*/
         opacity: 0;
-        transform: translateY(20px);
-        animation: menuanimation $anim-speed linear;
-        animation-fill-mode:forwards;
-        animation-delay: 0s;
+        -webkit-transform: translateY(20px);
+            -ms-transform: translateY(20px);
+                transform: translateY(20px);
+        -webkit-animation: menuanimation $anim-speed linear;
+                animation: menuanimation $anim-speed linear;
+        -webkit-animation-fill-mode:forwards;
+                animation-fill-mode:forwards;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
         @for $i from 1 through 6{
         &:nth-child(#{$i}){
-            animation-delay: $i * 0.15s;
+            -webkit-animation-delay: $i * 0.15s;
+                    animation-delay: $i * 0.15s;
             }
         }
     }
@@ -75,7 +96,8 @@
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-        animation: menutitleanimation 0.3s both;
+        -webkit-animation: menutitleanimation 0.3s both;
+                animation: menutitleanimation 0.3s both;
         &::before{
             content: "";
             position: absolute;
@@ -93,14 +115,21 @@
         border-radius: 10px;
         margin: 15px 15px;
         height: 50px;
+        /*Gestion animations plats - boucle*/
         opacity: 0;
-        transform: translateY(20px);
-        animation: menuanimation $anim-speed linear;
-        animation-fill-mode:forwards;
-        animation-delay: 0s;
+        -webkit-transform: translateY(20px);
+            -ms-transform: translateY(20px);
+                transform: translateY(20px);
+        -webkit-animation: menuanimation $anim-speed linear;
+                animation: menuanimation $anim-speed linear;
+        -webkit-animation-fill-mode:forwards;
+                animation-fill-mode:forwards;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
         @for $i from 1 through 4{
         &:nth-child(#{$i}){
-            animation-delay: $i * 0.15s;
+            -webkit-animation-delay: $i * 0.15s;
+                    animation-delay: $i * 0.15s;
             }
         }
     }
@@ -108,7 +137,8 @@
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-        animation: menutitleanimation 0.3s both;
+        -webkit-animation: menutitleanimation 0.3s both;
+                animation: menutitleanimation 0.3s both;
         &::before{
             content: "";
             position: absolute;
@@ -124,15 +154,22 @@
         background-color: #fff;
         border-radius: 10px;
         margin: 15px 15px;
+        /*Gestion animations plats - boucle*/
         height: 50px;
         opacity: 0;
-        transform: translateY(20px);
-        animation: menuanimation $anim-speed linear;
-        animation-fill-mode:forwards;
-        animation-delay: 0s;
+        -webkit-transform: translateY(20px);
+            -ms-transform: translateY(20px);
+                transform: translateY(20px);
+        -webkit-animation: menuanimation $anim-speed linear;
+                animation: menuanimation $anim-speed linear;
+        -webkit-animation-fill-mode:forwards;
+                animation-fill-mode:forwards;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
         @for $i from 1 through 4{
         &:nth-child(#{$i}){
-            animation-delay: $i * 0.15s;
+            -webkit-animation-delay: $i * 0.15s;
+                    animation-delay: $i * 0.15s;
             }
         }
     }
@@ -140,7 +177,8 @@
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-        animation: menutitleanimation 0.3s both;
+        -webkit-animation: menutitleanimation 0.3s both;
+                animation: menutitleanimation 0.3s both;
         &::before{
             content: "";
             position: absolute;
@@ -153,29 +191,46 @@
     }
 
     &__layout{ /*Mise en page générale des contenus */
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         width: 100%;
         height: 100%;
         cursor: pointer;
         &:hover .menu__layout3{ /*Gestion apparition de la coche et animation*/
-            flex: 0 0 10%;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 10%;
+                    flex: 0 0 10%;
             background-color: $tertiaryColor;
             color: white;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: cocheanimation 0.5s both;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-animation: cocheanimation 0.5s both;
+                    animation: cocheanimation 0.5s both;
         }
         &:hover .menu__firstcourse--effect{
-            animation: rotatecocheanimation 0.5s both;
+            -webkit-animation: rotatecocheanimation 0.5s both;
+                    animation: rotatecocheanimation 0.5s both;
         }
     }
     &__layout1{ /*Mise en page nom du plat et description */
-        align-self: flex-end;
-        flex: 1 1 80%;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 80%;
+                flex: 1 1 80%;
         padding: 5px;
         overflow: hidden;
         & > p:first-child{
@@ -185,14 +240,20 @@
         & > p{
             margin: 0px;
             overflow: hidden;
-            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
             white-space: nowrap;
             font-size: $paragraphfontsize_restaurants;
         }
     }
     &__layout2{ /*Mise en page du prix */
-        flex: 1 0 10%;
-        align-self: flex-end;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 10%;
+                flex: 1 0 10%;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         padding: 5px;
         & > p{
@@ -207,6 +268,15 @@
 }
 
 /*Animations des menus*/
+@-webkit-keyframes menutitleanimation {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        rotate: 1turn;
+    }
+}
 @keyframes menutitleanimation {
     0% {
         opacity: 0;
@@ -216,33 +286,72 @@
         rotate: 1turn;
     }
 }
+@-webkit-keyframes menuanimation {
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
 @keyframes menuanimation {
     100%{
         opacity: 1;
-        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
     }
 }
 
 /*Animations de la coche*/
-@keyframes cocheanimation {
+@-webkit-keyframes cocheanimation {
     0% {
-        transform: translate(20px);
+        -webkit-transform: translate(20px);
+                transform: translate(20px);
         opacity: 0;
     }
     100%{
         opacity: 1;
-        transform: translate(0px);
+        -webkit-transform: translate(0px);
+                transform: translate(0px);
+    }
+}
+@keyframes cocheanimation {
+    0% {
+        -webkit-transform: translate(20px);
+                transform: translate(20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translate(0px);
+                transform: translate(0px);
+    }
+}
+@-webkit-keyframes rotatecocheanimation {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+    }
+    100%{
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 }
 @keyframes rotatecocheanimation {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
     50%{
-        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
     }
     100%{
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 }
 
@@ -270,18 +379,24 @@
         max-width: 330px;
     }
     .responsive{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         &__firstcourse{
-            flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
             margin: 0;
         }
         &__maincourse{
-            flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
             margin: 0;
         }
         &__dessert{
-            flex-basis: 50%;
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%;
             margin: 0;
         }
     }
@@ -304,18 +419,24 @@
         width: 90%;
     }
     .responsive{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         &__firstcourse{
-            flex-basis: 33.33%;
+            -ms-flex-preferred-size: 33.33%;
+                flex-basis: 33.33%;
             margin: 0;
         }
         &__maincourse{
-            flex-basis: 33.33%;
+            -ms-flex-preferred-size: 33.33%;
+                flex-basis: 33.33%;
             margin: 0;
         }
         &__dessert{
-            flex-basis: 33.33%;
+            -ms-flex-preferred-size: 33.33%;
+                flex-basis: 33.33%;
             margin: 0;
         }
     }

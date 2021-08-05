@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .presentation__button{ /*Bouton page d'accueil*/
     display: block;
     margin: auto;
@@ -6,13 +13,25 @@
     border-radius: 25px;
     color: white;
     cursor: pointer;
+    background: -webkit-gradient(linear, left top, left bottom, from($secondaryColor), to($primaryColor));
+    background: -o-linear-gradient($secondaryColor, $primaryColor);
     background: linear-gradient($secondaryColor, $primaryColor);
-    box-shadow: 10px 10px 25px grey;
+    -webkit-box-shadow: 10px 10px 25px grey;
+            box-shadow: 10px 10px 25px grey;
+    -webkit-transition: -webkit-transform 400ms ease-in-out;
+    transition: -webkit-transform 400ms ease-in-out;
+    -o-transition: transform 400ms ease-in-out;
     transition: transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
     &:hover{ /*Animation du bouton, agrandissement, éclaircissement, ombre portée*/
-        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05);
+        background: -webkit-gradient(linear, left top, left bottom, from(lighten($secondaryColor, 2%)), to(lighten($primaryColor, 2%)));
+        background: -o-linear-gradient(lighten($secondaryColor, 2%), lighten($primaryColor, 2%));
         background: linear-gradient(lighten($secondaryColor, 2%), lighten($primaryColor, 2%));
-        box-shadow: 10px 10px 20px grey;
+        -webkit-box-shadow: 10px 10px 20px grey;
+                box-shadow: 10px 10px 20px grey;
     }
 }
 .menu__button{
@@ -25,20 +44,40 @@
     border-radius: 25px;
     color: white;
     cursor: pointer;
+    background: -webkit-gradient(linear, left top, left bottom, from($secondaryColor), to($primaryColor));
+    background: -o-linear-gradient($secondaryColor, $primaryColor);
     background: linear-gradient($secondaryColor, $primaryColor);
-    box-shadow: 10px 10px 25px grey;
+    -webkit-box-shadow: 10px 10px 25px grey;
+            box-shadow: 10px 10px 25px grey;
+    -webkit-transition: -webkit-transform 400ms ease-in-out;
+    transition: -webkit-transform 400ms ease-in-out;
+    -o-transition: transform 400ms ease-in-out;
     transition: transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
     &:hover{ /*Animation du bouton, agrandissement, éclaircissement, ombre portée*/
-        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05);
+        background: -webkit-gradient(linear, left top, left bottom, from(lighten($secondaryColor, 2%)), to(lighten($primaryColor, 2%)));
+        background: -o-linear-gradient(lighten($secondaryColor, 2%), lighten($primaryColor, 2%));
         background: linear-gradient(lighten($secondaryColor, 2%), lighten($primaryColor, 2%));
-        box-shadow: 10px 10px 20px grey;
+        -webkit-box-shadow: 10px 10px 20px grey;
+                box-shadow: 10px 10px 20px grey;
     }
 }
-@media screen and (min-width: 600px) {  /*Mode tablette et desktop*/
+@media screen and (min-width: 600px) and (max-width: 1023px){  /*Mode tablette*/
     .presentation__button{
-        width: 40%;
+        width: 30%;
     }
     .menu__button{
-        width: 40%;
+        width: 30%;
+    }
+}
+@media screen and (min-width: 1024px) {  /*Mode Desktop*/
+    .presentation__button{
+        width: 20%;
+    }
+    .menu__button{
+        width: 20%;
     }
 }
