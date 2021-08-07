@@ -205,15 +205,6 @@
 }
 
 /*Animations des menus*/
-@-webkit-keyframes menutitleanimation {
-    0% {
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        rotate: 1turn;
-    }
-}
 @keyframes menutitleanimation {
     0% {
         opacity: 0;
@@ -221,12 +212,6 @@
     100%{
         opacity: 1;
         rotate: 1turn;
-    }
-}
-@-webkit-keyframes menuanimation {
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
     }
 }
 @keyframes menuanimation {
@@ -237,16 +222,6 @@
 }
 
 /*Animations de la coche*/
-@-webkit-keyframes cocheanimation {
-    0% {
-        transform: translate(20px);
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        transform: translate(0px);
-    }
-}
 @keyframes cocheanimation {
     0% {
         transform: translate(20px);
@@ -255,17 +230,6 @@
     100%{
         opacity: 1;
         transform: translate(0px);
-    }
-}
-@-webkit-keyframes rotatecocheanimation {
-    0% {
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(-360deg);
-    }
-    100%{
-        transform: rotate(0deg);
     }
 }
 @keyframes rotatecocheanimation {

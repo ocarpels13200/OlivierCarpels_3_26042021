@@ -36,9 +36,7 @@
     }
     &__logo{
         display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        align-items: center;
         width: 30px;
     }
     &__secondarynav{
@@ -57,9 +55,7 @@
             @include tablettemode;
             margin: auto;
             display: flex;
-            -webkit-box-pack: space-evenly;
-                -ms-flex-pack: space-evenly;
-                    justify-content: space-evenly;
+            justify-content: space-evenly;
         }
     }
 }
@@ -74,9 +70,7 @@
             @include desktopmode;
             margin: auto;
             display: flex;
-            -webkit-box-pack: space-evenly;
-                -ms-flex-pack: space-evenly;
-                    justify-content: space-evenly;
+            justify-content: space-evenly;
         }
     }   
 }
