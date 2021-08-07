@@ -87,8 +87,8 @@
                 animation-delay: 0s;
         @for $i from 1 through 6{
         &:nth-child(#{$i}){
-            -webkit-animation-delay: $i * 0.15s;
-                    animation-delay: $i * 0.15s;
+            -webkit-animation-delay: $i * 0.20s;
+                    animation-delay: $i * 0.20s;
             }
         }
     }
@@ -96,8 +96,8 @@
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-        -webkit-animation: menutitleanimation 0.3s both;
-                animation: menutitleanimation 0.3s both;
+        -webkit-animation: menutitleanimation 0.8s both;
+                animation: menutitleanimation 0.8s both;
         &::before{
             content: "";
             position: absolute;
@@ -128,8 +128,8 @@
                 animation-delay: 0s;
         @for $i from 1 through 4{
         &:nth-child(#{$i}){
-            -webkit-animation-delay: $i * 0.15s;
-                    animation-delay: $i * 0.15s;
+            -webkit-animation-delay: $i * 0.20s;
+                    animation-delay: $i * 0.20s;
             }
         }
     }
@@ -137,8 +137,8 @@
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-        -webkit-animation: menutitleanimation 0.3s both;
-                animation: menutitleanimation 0.3s both;
+        -webkit-animation: menutitleanimation 0.8s both;
+                animation: menutitleanimation 0.8s both;
         &::before{
             content: "";
             position: absolute;
@@ -168,8 +168,8 @@
                 animation-delay: 0s;
         @for $i from 1 through 4{
         &:nth-child(#{$i}){
-            -webkit-animation-delay: $i * 0.15s;
-                    animation-delay: $i * 0.15s;
+            -webkit-animation-delay: $i * 0.20s;
+                    animation-delay: $i * 0.20s;
             }
         }
     }
@@ -177,8 +177,8 @@
         position: relative;
         margin: 0px 0px 45px 15px;
         padding-top: 20px;
-        -webkit-animation: menutitleanimation 0.3s both;
-                animation: menutitleanimation 0.3s both;
+        -webkit-animation: menutitleanimation 0.8s both;
+                animation: menutitleanimation 0.8s both;
         &::before{
             content: "";
             position: absolute;
