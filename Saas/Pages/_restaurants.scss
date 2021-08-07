@@ -12,8 +12,7 @@
     }
 }
 .mainMenu{ /*Mise en page générale de la partie restaurant, titre, menus et bouton*/
-    background-color: #eaeaea;
-    border: solid 2px #EAEAEA;
+    background-color: $grey1;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     position: relative;
@@ -69,8 +68,7 @@
     }
 
     &__firstcourse{ /*Mise en page générale des entrées */
-        border: solid #fff 1px;
-        background-color: #fff;
+        background-color: $white;
         border-radius: 10px;
         margin: 15px 15px;
         height: 50px;
@@ -110,8 +108,7 @@
     }
 
     &__maincourse{ /*Mise en page générale des plats */
-        border: solid #fff 1px;
-        background-color: #fff;
+        background-color: $white;
         border-radius: 10px;
         margin: 15px 15px;
         height: 50px;
@@ -150,8 +147,7 @@
         }
     }
     &__dessert{ /*Mise en page générale des desserts */
-        border: solid #fff 1px;
-        background-color: #fff;
+        background-color: $white;
         border-radius: 10px;
         margin: 15px 15px;
         /*Gestion animations plats - boucle*/
